@@ -1,1 +1,6 @@
-<p>hero works!</p>
+<div class="form-group">
+  <label for="power">Hero Power</label>
+  <select name="power" id="power" required>
+    <option *ngFor="let pow of powers" [value]="pow">{{ pow }}</option>
+  </select>
+</div>
