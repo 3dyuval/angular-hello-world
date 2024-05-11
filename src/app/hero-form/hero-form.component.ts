@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Hero } from '../hero'
+import { FormsModule } from "@angular/forms";
 
 @Component({
   selector: 'app-hero-form',
@@ -16,6 +17,9 @@ export class HeroFormComponent {
 
     submitted = false;
 
-    onSubmit() { this.submitted = true; }
+
+    onSubmit() {
+      alert(JSON.stringify(this.model))
+      this.submitted = true; }
 
 }
