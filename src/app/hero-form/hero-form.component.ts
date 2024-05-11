@@ -4,9 +4,10 @@ import { Hero } from '../hero'
 @Component({
   selector: 'app-hero-form',
   standalone: false,
-  templateUrl: './hero-form-component.html',
-  styleUrl: './hero-form-component.scss'
+  templateUrl: './hero-form.component.html',
+  styleUrl: './hero-form.component.scss'
 })
+
 export class HeroFormComponent {
 
     powers = ['Really Smart', 'Super Flexible',
