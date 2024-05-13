@@ -5,6 +5,12 @@
       "name": "Dr IQ",
       "power": "Really Smart",
       "alterEgo": "Chuck Overstreet"
+    },
+    {
+      "id": 18,
+      "name": "Yo Master",
+      "power": "Super Flexible",
+      "alterEgo": "Psucho Square"
     }
   ]
 }
