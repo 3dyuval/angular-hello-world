@@ -2,6 +2,9 @@
   <div class="content">
     <div class="left-side">
       <app-sidebar />
+      <ul>
+        <li *ngFor="let hero of heroes">{{ hero.name }}</li>
+      </ul>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">

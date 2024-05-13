@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Hero } from '../hero'
-import { FormsModule } from "@angular/forms";
+import { DbService } from "../db.service"
 
 @Component({
   selector: 'app-hero-form',
@@ -17,9 +17,16 @@ export class HeroFormComponent {
 
     submitted = false;
 
+  constructor(private dbService: DbService){
+
+  }
 
     onSubmit() {
-      alert(JSON.stringify(this.model))
-      this.submitted = true; }
+        const heroes = this.dbService.sendData(this.model)
+          .then((heroes) => {
 
+          this.submitted = true;
+          alert('success')
+        })
+    }
 }

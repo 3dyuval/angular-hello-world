@@ -1,0 +1,10 @@
+{
+  "heroes": [
+    {
+      "id": 18,
+      "name": "Dr IQ",
+      "power": "Really Smart",
+      "alterEgo": "Chuck Overstreet"
+    }
+  ]
+}

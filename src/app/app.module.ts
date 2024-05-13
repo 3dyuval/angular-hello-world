@@ -7,6 +7,7 @@ import { routes } from "./app.routes"
 import { RootComponent} from "./root/root.component"
 import { BrowserModule } from '@angular/platform-browser'
 import {SidebarModule} from "./sidebar/sidebar.module";
+import { DbService } from "./db.service"
 
 @NgModule({
   imports: [
@@ -14,7 +15,7 @@ import {SidebarModule} from "./sidebar/sidebar.module";
     RouterModule,
     BrowserModule,
   ],
-  providers: [provideRouter(routes)],
+  providers: [provideRouter(routes), DbService],
   bootstrap: [RootComponent],
 })
 export class AppModule {
