@@ -1,4 +1,6 @@
-import { Component } from "@angular/core"
+import { Component, Input } from "@angular/core"
+import { Hero } from "./hero"
+import { DbService } from "./db.service"
 
 
 @Component({
@@ -8,7 +10,8 @@ import { Component } from "@angular/core"
   <main class="main">
   <div class="content">
     <div class="left-side">
-      <app-sidebar />
+      <app-sidebar [title]="title" />
+      {{ hero$ }}
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
@@ -19,4 +22,14 @@ import { Component } from "@angular/core"
 })
 export class AppComponent {
   title = 'app';
+  hero$: Hero | undefined;
+
+ @Input()
+  set id(id: string) {
+   console.log(id)
+  }
+
+  constructor(private dbService: DbService) {
+  }
+
 }

@@ -27,4 +27,8 @@ export class DbService {
       return []
     })
   }
+
+  async getHero(id: string): Promise<Hero | undefined> {
+    return this.getData().then(heroes => heroes.find(hero => +hero.id === +id))
+  }
 }

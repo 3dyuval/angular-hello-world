@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router, Routes } from "@angular/router";
 import { DbService } from "../db.service"
 
@@ -11,6 +11,7 @@ import { DbService } from "../db.service"
 })
 export class SidebarComponent {
   routes: Routes = []
+  @Input({ required: true }) title: string = '';
 
   constructor(
     private router: Router,

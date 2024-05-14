@@ -20,7 +20,7 @@
   <input type="reset" class="btn btn-default"/>
   <input
     type="submit"
-    [disabled]="!heroForm.form.valid"
+    [disabled]="submitted || !heroForm.form.valid"
     [class.btn-success]="submitted"
     class="btn" value="New Hero"/>
 </form>
