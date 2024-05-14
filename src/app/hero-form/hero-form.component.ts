@@ -12,6 +12,8 @@ import { ActivatedRoute, ParamMap } from "@angular/router"
 })
 
 export class HeroFormComponent {
+  // TODO add state using this pattern:
+  // https://www.youtube.com/watch?v=vjSM7SxN9-k
 
   powers = ['Really Smart', 'Super Flexible', 'Super Hot', 'Weather Changer'];
   model: any = {}
