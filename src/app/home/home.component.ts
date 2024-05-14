@@ -6,15 +6,17 @@ import { Hero } from "../hero"
 @Component({
   selector: 'app-root',
   standalone: false,
-  templateUrl: './root.component.html',
-  styleUrl: './root.component.scss',
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.scss',
 })
-export class RootComponent {
+export class HomeComponent {
   heroes: Hero[] = [];
 
   title = 'angular-form';
 
-  constructor(private dbService: DbService) {
-    dbService.getData().then(data => this.heroes = data)
+  constructor(private dbService: DbService) {}
+
+  ngOnInit() {
+    this.dbService.getData().then((data: Hero[]) => this.heroes = data)
   }
 }

@@ -1,22 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RootModule as AppRootModule } from "./root/root.module"
+import { HomeModule as AppRootModule } from "./home/home.module"
 import { HeroFormModule } from "./hero-form/hero-form.module"
 import { provideRouter, RouterModule } from "@angular/router"
 import { routes } from "./app.routes"
-import { RootComponent} from "./root/root.component"
+import { AppComponent } from "./app.component"
 import { BrowserModule } from '@angular/platform-browser'
 import {SidebarModule} from "./sidebar/sidebar.module";
 import { DbService } from "./db.service"
+import { SidebarComponent } from "./sidebar/sidebar.component"
 
 @NgModule({
+  declarations: [AppComponent],
   imports: [
     CommonModule,
     RouterModule,
     BrowserModule,
+    SidebarModule,
   ],
   providers: [provideRouter(routes), DbService],
-  bootstrap: [RootComponent],
+  bootstrap: [AppComponent],
 })
 export class AppModule {
 

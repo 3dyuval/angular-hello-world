@@ -12,6 +12,5 @@ import { DbService } from "../db.service"
     CommonModule,
     FormsModule,
   ],
-  providers: [DbService]
 })
 export class HeroFormModule { }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RootComponent } from "./root.component"
+import { HomeComponent } from "./home.component"
 import { RouterOutlet } from "@angular/router"
 import { SidebarModule } from "../sidebar/sidebar.module";
 import { DbService } from "../db.service"
@@ -8,15 +8,14 @@ import { DbService } from "../db.service"
 
 @NgModule({
     declarations: [
-      RootComponent
+      HomeComponent
     ],
     imports: [
       CommonModule,
       RouterOutlet,
-      SidebarModule
     ],
   }
 )
 
-export class RootModule {
+export class HomeModule {
 }

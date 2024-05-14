@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import {Routes, Router} from "@angular/router";
+import { Router, Routes } from "@angular/router";
+import { DbService } from "../db.service"
+
 
 @Component({
   selector: 'app-sidebar',
@@ -10,11 +12,18 @@ import {Routes, Router} from "@angular/router";
 export class SidebarComponent {
   routes: Routes = []
 
-  constructor(private router: Router) {
-    this.routes = this.router.config
-      this.routes.unshift({
-        path: '',
-        title: 'Home',
-      })
+  constructor(
+    private router: Router,
+    private dbService: DbService
+  ) {
+    this.routes = this.router.config.filter(route => !route.path?.includes(':'))
+  }
+
+  async ngOnInit() {
+    const heroes = await this.dbService.getData()
+    this.routes.push(...heroes.map(hero => ({
+        path: `hero-form/${hero.id}`,
+        title: hero.name
+      })))
   }
 }

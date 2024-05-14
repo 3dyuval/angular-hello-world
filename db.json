@@ -1,16 +1,16 @@
 {
   "heroes": [
     {
-      "id": 18,
+      "id": 1,
       "name": "Dr IQ",
       "power": "Really Smart",
       "alterEgo": "Chuck Overstreet"
     },
     {
-      "id": 18,
+      "id": 2,
       "name": "Yo Master",
       "power": "Super Flexible",
-      "alterEgo": "Psucho Square"
+      "alterEgo": "Psycho Square"
     }
   ]
 }
