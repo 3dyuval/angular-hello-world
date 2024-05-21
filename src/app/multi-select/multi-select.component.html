@@ -1,0 +1,18 @@
+<div class="selection-container">
+  <button mat-button (click)="selectAll()">SELECT ALL</button>
+  <mat-selection-list
+    [compareWith]="compareWith"
+    color="primary" (selectionChange)="handleChange($event)" >
+    <mat-list-option [value]="null" (selectedChange)="log($event)">
+      SELECT ALL
+    </mat-list-option>
+    @for (option of options; track options) {
+      <mat-list-option [selected]="isSelected(option)" [value]="option">{{ option }}</mat-list-option>
+    }
+  </mat-selection-list>
+  <ul>
+    @for (i of selected(); track selected()) {
+      <li>{{ i }}</li>
+    }
+  </ul>
+</div>

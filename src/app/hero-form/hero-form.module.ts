@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {HeroFormComponent} from "./hero-form.component";
 import {FormsModule} from "@angular/forms";
 import { DbService } from "../db.service"
+import { MatFormField } from '@angular/material/form-field';
 
 
 
@@ -11,6 +12,7 @@ import { DbService } from "../db.service"
   imports: [
     CommonModule,
     FormsModule,
+    MatFormField,
   ],
 })
 export class HeroFormModule { }

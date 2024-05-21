@@ -8,7 +8,8 @@ import { AppComponent } from "./app.component"
 import { BrowserModule } from '@angular/platform-browser'
 import {SidebarModule} from "./sidebar/sidebar.module";
 import { DbService } from "./db.service"
-import { SidebarComponent } from "./sidebar/sidebar.component"
+import { SidebarComponent } from "./sidebar/sidebar.component";
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async'
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,7 +21,7 @@ import { SidebarComponent } from "./sidebar/sidebar.component"
   ],
   providers: [provideRouter(routes,  withRouterConfig({
     paramsInheritanceStrategy: 'always',
-  }), withComponentInputBinding()), DbService],
+  }), withComponentInputBinding()), DbService, provideAnimationsAsync()],
   bootstrap: [AppComponent],
 })
 export class AppModule {
